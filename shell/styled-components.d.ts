@@ -1,4 +1,4 @@
-import theme from './src/themes/theme'
+import theme from 'themes/theme'
 
 type Theme = typeof theme
 

@@ -6,7 +6,10 @@
   "settings": {
     "react": {
       "version": "detect"
-    }
+    },
+    "import/core-modules": [
+      "content/App"
+    ]
   },
   "extends": [
     "eslint:recommended",

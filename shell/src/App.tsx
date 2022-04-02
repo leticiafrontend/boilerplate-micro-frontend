@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import logo from './logo.svg'
 import './App.css'
+
+const ContentApp = lazy(() => import('content/App'))
 
 function App() {
   return (
@@ -8,9 +10,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
+          <p>Hi from Shell App</p>
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -19,6 +19,9 @@ function App() {
           >
             Learn React
           </a>
+          <Suspense fallback="Loading...">
+            <ContentApp />
+          </Suspense>
         </header>
       </div>
     </>
