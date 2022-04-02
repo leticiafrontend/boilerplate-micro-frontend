@@ -1,6 +1,9 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
+import Theme from 'themes/theme'
 
-export const GlobalStyles = createGlobalStyle`
+type ThemeType = typeof Theme
+
+export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -33,11 +36,12 @@ export const GlobalStyles = createGlobalStyle`
     html, body, #__next {
     height: 100%;
   }
-
-  html {
-    font-size: 62.5%;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-  }
+  ${({ theme }) => css`
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      font-family: ${theme.font.family};
+    }
+  `}
 `
