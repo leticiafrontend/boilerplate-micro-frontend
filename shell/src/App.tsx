@@ -1,17 +1,11 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
 import Theme from './themes'
-
-const ContentApp = lazy(() => import('content/App'))
+import Routes from './routes'
 
 const App = () => {
   return (
     <Theme>
-      <div>
-        <h1>Hi from Shell App</h1>
-        <Suspense fallback="Loading...">
-          <ContentApp />
-        </Suspense>
-      </div>
+      <Routes />
     </Theme>
   )
 }

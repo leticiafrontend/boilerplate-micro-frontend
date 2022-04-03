@@ -40,6 +40,8 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     }
     body {
       font-family: ${theme.font.family};
+      background-color: #222;
+      color: #fff;
     }
   `}
 `
