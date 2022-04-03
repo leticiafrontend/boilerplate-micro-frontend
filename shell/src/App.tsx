@@ -6,7 +6,7 @@ const ContentApp = lazy(() => import('content/App'))
 const App = () => {
   return (
     <Theme>
-      <div className="App">
+      <div>
         <h1>Hi from Shell App</h1>
         <Suspense fallback="Loading...">
           <ContentApp />
