@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { GlobalStyles } from '../styles/global'
+import { GlobalStyles } from 'styles/global'
 import theme from './theme'
 
 type ThemeProps = {

@@ -13,7 +13,8 @@ module.exports = {
     open: true
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    modules: [path.resolve(__dirname, './src'), 'node_modules']
   },
   module: {
     rules: [
