@@ -17,5 +17,5 @@
     "noEmit": false,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src", "styled-components.d.ts"]
 }

@@ -27,9 +27,10 @@
     "webpack-server": "^0.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "webpack serve --open",
+    "build": "webpack --config webpack.prod.js",
+    "serve": "serve dist -p 3001",
+    "clean": "rm -rf dist",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
